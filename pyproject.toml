@@ -20,6 +20,7 @@ dependencies = [
     "psycopg2-binary>=2.9.9,<3.0.0",
     "cookiecutter>=2.3.0,<3.0.0"
 ]
+license = "MIT"
 
 
 [build-system]
@@ -35,8 +36,6 @@ packages = [
     { include = "cli.py" },
     { include = "template" }
 ]
-
-license = {text = "MIT"}
 
 [project.urls]
 Homepage = "https://github.com/yourusername/fastapi_vue3_admin"
