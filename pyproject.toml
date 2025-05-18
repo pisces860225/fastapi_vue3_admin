@@ -1,6 +1,6 @@
 [project]
 name = "fastapi_vue3_admin"
-version = "0.0.2"
+version = "0.0.1"
 description = "FastAPI + Vue3 管理後台腳手架"
 authors = [
     {name = "Jeremy.Huang",email = "forpythonwork0225@gmail.com"}
