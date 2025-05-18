@@ -21,7 +21,10 @@ jobs:
       - name: Install Poetry
         run: pip install poetry
 
-      - name: Install dependencies (no-root)
+      - name: Refresh lockfile
+        run: poetry lock --no-interaction
+
+      - name: Install dependencies
         run: poetry install --no-root --no-interaction
 
       - name: Build package
