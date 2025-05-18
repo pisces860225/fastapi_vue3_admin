@@ -5,6 +5,9 @@ import * as directives from 'vuetify/directives';
 import 'vuetify/styles';
 import { md3 } from 'vuetify/blueprints';
 import App from './App.vue';
+import router from './router';
+import { createPinia } from 'pinia';
+import './assets/tailwind.css';
 
 const vuetify = createVuetify({
   blueprint: md3,
@@ -26,4 +29,6 @@ const vuetify = createVuetify({
   },
 });
 
-createApp(App).use(vuetify).mount('#app'); 
+const app = createApp(App);
+const pinia = createPinia();
+app.use(router).use(pinia).use(vuetify).mount('#app'); 
