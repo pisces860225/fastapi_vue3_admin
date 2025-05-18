@@ -36,7 +36,12 @@ def migrate(message: str = "auto", upgrade: bool = True):
 
 
 @cli.command()
-def create(project_name: str, template: str | None = None):
+def create(
+    project_name: str,
+    template: str | None = None,
+    admin_email: str = "admin@example.com",
+    admin_password: str = "123456",
+):
     """由內建或自訂 Cookiecutter 模板建立新專案。
 
     範例：
@@ -54,6 +59,8 @@ def create(project_name: str, template: str | None = None):
         no_input=True,
         extra_context={
             "project_slug": project_name,
+            "admin_email": admin_email,
+            "admin_password": admin_password,
         },
     )
 
